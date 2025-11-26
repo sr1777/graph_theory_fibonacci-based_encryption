@@ -29,19 +29,16 @@ Works in byte-space (0–255) with modulo arithmetic to avoid overflow.
 
 
 
-## Complexity
+## Complexity Analysis
+| Metric             | Complexity                     | Explanation                                                                 |
+|--------------------|--------------------------------|-----------------------------------------------------------------------------|
+| **Time**           | **O(p · n³)**                  | Dominated by complete-graph construction and repeated matrix multiplications |
+| **Space**          | **O(p · n²)**                  | Stores partition matrices, MST matrices, key matrices, and cipher matrices  |
 
-* **Time Complexity:**
-  [
-  O(p \cdot n^3)
-  ]
-  where (p) = number of partitions, (n) = number of bytes in the message.
-* **Space Complexity:**
-  [
-  O(p \cdot n^2)
-  ]
-  storing partition matrices, MST matrices, key matrices, and cipher matrices.
-
+where  
+- `p` = number of partitions (message length ≈ `p × n²` bytes)  
+- `n` = partition dimension (side length of square matrix per partition)
+- 
 ## Requirements
 
 * Python 3.8+
@@ -57,4 +54,5 @@ pip install numpy networkx
 ## License
 
 MIT License – free to use and modify for educational and research purposes.
+
 
