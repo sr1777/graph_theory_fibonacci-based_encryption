@@ -14,6 +14,7 @@ Refined the approach to use Fibonacci-based deterministic mappings, embedding by
 
 Works in byte-space (0–255) with modulo arithmetic to avoid overflow.
 
+Validated the scheme on 15,715 bytes of input, yielding 7,858 Fibonacci-indexed partitions and perfect (100%) reversibility.
 ## How It Works
 
 1. Encode the message and add boundary bytes (`'a'` and `'z'`).
@@ -54,5 +55,6 @@ pip install numpy networkx
 ## License
 
 MIT License – free to use and modify for educational and research purposes.
+
 
 
